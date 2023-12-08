@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+			.navbar{
+			  font-family: 'Inter', sans-serif;
+			  font-weight: 800;
+        display: inline-block;
+			}
+
+      .navbar-nav .nav-link {
+        color: #fff; /* Set the default text color (white) */
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+        color: #fff; /* Set the active text color (white) */
+    }
+    .navbar-nav.nav-link.active:hover {
+      color: #fff !important;
+  }
+
+    .nav-link.active{
+      color: white !important;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    #berita-title{
+      text-align : center;
+      margin-top: 30px;
+    }
+
+    #beritanya{
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px; /* Example border radius */
+    }
+
+    .card-text{
+      color: #fff;
+    }
+
+
+    #pengumuman-spmb{
+      padding: 50px;
+      margin: 15px;
+    }
+    
+    #card-spmb{
+      background-color:#164863 ;
+    }
+
+    .img-fluid.rounded-start{
+      height: 176px;
+    }
+
+    .card.body{
+      background-color:#164863 ;
+    }
+
+    .card-title{
+      color: #fff !important;
+    }
+
+    .text-body-secondary{
+      color: #fff !important;
+    }
+
+    .bg-primary.text-white.text-center.text-lg-start{
+      background-color:#164863 !important ;
+    }
+
+    .linkedin{
+      width:35px;
+      margin-bottom: 5px;
+      font-style: none;
+    }
+
+    .insta{
+      width:35px;
+      margin-bottom: 5px;
+    }
+
+    .twt{
+      width: 35px;
+      margin-bottom: 5px;
+      font-style: none;
+    }
+
+    .youtube{
+      width: 35px;
+      margin-bottom: 5px;
+      font-style: none; 
+    }
+
+    .judul-pengumuman{
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .judul{
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+
+    #footer{
+      margin-top: 20px;
+    }
+
+
+    a:hover {
+      color: #164863; /* Ganti dengan warna yang diinginkan saat hover */
+      text-decoration: underline; /* Ganti dengan efek lain yang diinginkan, misalnya underline */
+  }
+
+  .card.w-75.mb-3{
+    margin-left: 25px;
+    width: 1210px !important;
+  }
+
+  .card-title.lembaga{
+    color: black !important;
+  }
+  
+  .card-text{
+    color: black;
+  }
+    
+
+
+
+
+
+            
+  /* Generate series of `.navbar-expand-*` responsive classes for configuring*/
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name {$infix} 
+    {
+      @include media-breakpoint-up($next) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          .nav-link {
+            padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
+            padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+          }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .offcanvas {
+          // stylelint-disable declaration-no-important
+          position: static;
+          z-index: auto;
+          flex-grow: 1;
+          width: auto !important;
+          height: auto !important;
+          visibility: visible !important;
+          background-color: transparent !important;
+          border: 0 !important;
+          transform: none !important;
+          @include box-shadow(none);
+          @include transition(none);
+          // stylelint-enable declaration-no-important
+
+          .offcanvas-header {
+            display: none;
+          }
+
+          .offcanvas-body {
+            display: flex;
+            flex-grow: 0;
+            padding: 0;
+            overflow-y: visible;
+          }
+        }
+      }
+    }
+  }
+}
+    
