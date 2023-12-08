@@ -1,4 +1,4 @@
-<span style="font-family: verdana, geneva, sans-serif;">/*  import google fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *{
   margin: 0;
@@ -226,3 +226,4 @@ button:hover {
 .job_details .img img {
   width: 300px; /* Mengatur lebar gambar sesuai lebar parent (.img) */
   height: auto;
+}
